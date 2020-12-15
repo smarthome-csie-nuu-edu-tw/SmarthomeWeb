@@ -12,4 +12,4 @@ services:
     expose: 
       - 80
     volumes: 
-      - ./亮點計畫簡易網站:/app
+      - ./亮點計畫簡易網站:/app:rw
