@@ -1,0 +1,15 @@
+version: '3'
+services:
+  # 亮點計畫簡易網站
+  web:
+    image: docker.io/bitnami/apache:2.4-debian-10
+    environment: 
+    # 反向代理服務機制
+      - VIRTUAL_HOST=iothome.406.csie.nuu.edu.tw
+      - LETSENCRYPT_HOST=iothome.406.csie.nuu.edu.tw
+      - LETSENCRYPT_EMAIL=m0724001@gm.nuu.edu.tw
+      - VIRTUAL_PORT=80
+    expose: 
+      - 80
+    volumes: 
+      - ./亮點計畫簡易網站:/app
