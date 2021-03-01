@@ -1311,7 +1311,6 @@ input[type="radio"] + label:before {
     margin: auto 8em;
     width: 60%;
   }
-
   /* 老人傾倒偵測系統 */
   .image.OldmanFalldownDetectSystem img{
     margin: auto 0 auto 6em;
