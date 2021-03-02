@@ -25,6 +25,8 @@ notification:
   recipients:
   - recipient: m0724001@gm.nuu.edu.tw
     notifier: local:n-lvmgm
+  - recipient: jayger1132@gmail.com
+    notifier: local:n-lvmgm
   condition:
   - Success
   - Changed
