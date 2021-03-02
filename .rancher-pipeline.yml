@@ -4,7 +4,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
+      tag: ziyi-bear/${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
+      pushRemote: true
+      registry: docker.pkg.github.com
     env:
       PLUGIN_BUILD_ARGS: --progress=tty --network=host
       PLUGIN_DEBUG: "true"
@@ -25,7 +27,7 @@ notification:
   recipients:
   - recipient: m0724001@gm.nuu.edu.tw
     notifier: local:n-lvmgm
-  - recipient: jayger1132@gmail.com
+  - recipient: m0724001@gm.nuu.edu.tw
     notifier: local:n-lvmgm
   condition:
   - Success
