@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "iothome.csie.nuu.edu.tw"
+    - "iothome.406.csie.nuu.edu.tw"
     secretName: iothome-406-prod-tls
   rules:
-  - host: "iothome.csie.nuu.edu.tw"
+  - host: "iothome.406.csie.nuu.edu.tw"
     http:
       paths:
       - backend:
