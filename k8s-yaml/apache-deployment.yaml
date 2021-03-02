@@ -14,7 +14,7 @@ spec:
         app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
     spec:
       imagePullSecrets:
-      - name: pipeline-docker-registry
+      - name: github-registry
       containers:
       - name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
         image: ${CICD_IMAGE}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
