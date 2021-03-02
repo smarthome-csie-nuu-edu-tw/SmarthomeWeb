@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-ing
+  namespace: ${CICD_GIT_REPO_NAME}
+  annotations:
+    # 憑證產生
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/issuer: "letsencrypt-prod-${CICD_GIT_REPO_NAME}"
+spec:
+  tls:
+  - hosts:
+    - "iothome.csie.nuu.edu.tw"
+    secretName: iothome-406-prod-tls
+  rules:
+  - host: "iothome.csie.nuu.edu.tw"
+    http:
+      paths:
+      - backend:
+          serviceName: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-svc
+          servicePort: 8080
+        path: "/"
+        pathType: "ImplementationSpecific"
