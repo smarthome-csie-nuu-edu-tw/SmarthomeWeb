@@ -25,9 +25,7 @@ stages:
       path: ./k8s-yaml/apache-ingress.yaml
 notification:
   recipients:
-  - recipient: m0724001@gm.nuu.edu.tw
-    notifier: local:n-lvmgm
-  - recipient: m0724001@gm.nuu.edu.tw
+  - recipient: jayger1132@gmail.com
     notifier: local:n-lvmgm
   condition:
   - Success
