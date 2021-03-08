@@ -4,7 +4,7 @@ metadata:
   name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
   namespace: ${CICD_GIT_REPO_NAME}
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
