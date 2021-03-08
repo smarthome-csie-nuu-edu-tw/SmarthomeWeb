@@ -9,6 +9,16 @@ spec:
     matchLabels:
       app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
   template:
+    affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
+            topologyKey: "kubernetes.io/hostname"
     metadata:
       labels:
         app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
