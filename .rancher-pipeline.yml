@@ -26,9 +26,9 @@ stages:
 notification:
   recipients:
   - recipient: m0724001@gm.nuu.edu.tw
-    notifier: local:n-csfbx
+    notifier: local:n-qvrnk
   - recipient: jayger1132@gmail.com
-    notifier: local:n-csfbx
+    notifier: local:n-qvrnk
   condition:
   - Success
   - Changed
