@@ -6,7 +6,7 @@ metadata:
   labels: 
     app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
   ports:
