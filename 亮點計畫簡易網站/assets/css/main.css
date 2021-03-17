@@ -1247,11 +1247,12 @@ input[type="radio"] + label:before {
       /* margin auto */
       margin: auto;
     }
+  
   /* 老人居家觀測 */
   .image.OldmanObserve img{
     /* margin 上下 , 左右 */
     margin: auto 5em;
-    width: 100%;
+    width: 80%;
   }
   .video.OldmanObserve video{
     width: 40%;
@@ -2179,7 +2180,8 @@ button,
     .posts article:before {
       background: rgba(210, 215, 217, 0.75);
       content: '';
-      display: block;
+      /* 活動頁面的格線 */
+      display: none;
       height: calc(100% + 6em);
       left: -3em;
       position: absolute;
@@ -2189,7 +2191,7 @@ button,
       background: rgba(210, 215, 217, 0.75);
       bottom: -3em;
       content: '';
-      display: block;
+      display: none;
       height: 1px;
       position: absolute;
       right: 0;
@@ -2207,7 +2209,8 @@ button,
       .posts article .image img {
         display: block;
         /* 可以直接更改post img 的大小 */
-        width: 110%; }
+        width: 400px;
+        height: 300px; }
   @media screen and (min-width: 1681px) {
     .posts article:nth-child(3n + 1):before {
       display: none; }
