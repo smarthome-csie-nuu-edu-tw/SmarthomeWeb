@@ -22,7 +22,7 @@ spec:
                 operator: In
                 values:
                 - ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
-            topologyKey: "location"
+            topologyKey: "kubernetes.io/hostname"
       imagePullSecrets:
       - name: harbor-406
       containers:
