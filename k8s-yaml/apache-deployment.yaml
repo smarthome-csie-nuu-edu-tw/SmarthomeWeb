@@ -16,13 +16,15 @@ spec:
       affinity:
         podAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: app
-                operator: In
-                values:
-                - ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
-            topologyKey: "location"
+          - weight: 100  
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}
+              topologyKey: "location"
       imagePullSecrets:
       - name: harbor-406
       containers:
