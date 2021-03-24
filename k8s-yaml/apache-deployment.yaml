@@ -28,7 +28,7 @@ spec:
       imagePullSecrets:
       - name: harbor-406
       containers:
-      - name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
+      - name: web
         image: ${CICD_IMAGE}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
         ports:
         - containerPort: 8080
